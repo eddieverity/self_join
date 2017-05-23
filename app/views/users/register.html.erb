@@ -1,0 +1,14 @@
+<h1>Register</h1>
+<form action="/users/register" method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Email:</label>
+    <input type="email" name="user[email]"><br>
+  <label>Name:</label>
+    <input type="text" name="user[name]" min-length=2 ><br>
+  <label>Password:</label>
+    <input type="password" name="user[password]"><br>
+  <label>Password Confirm:</label>
+    <input type="password" name="user[password_confirmation]"><br>
+  <input type="submit" value="Register New User">
+</form>
+<a href="/users/login">Log In</a>
